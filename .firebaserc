@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "reactiongameweb": {
+      "hosting": {
+        "ReactionGameWeb": [
+          "reactiongameweb"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "reactiongameweb"
+  }
+}
