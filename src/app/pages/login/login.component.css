@@ -12,47 +12,47 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .card {
+}
+
+.card {
     width: 400px;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     box-shadow: 0 0 .2rem #fff,
-                0 0 .2rem #fff,
-                0 0 2rem #bc13fe,
-                0 0 0.8rem #bc13fe,
-                0 0 2.8rem #bc13fe,
-                inset 0 0 1.3rem #bc13fe;
+        0 0 .2rem #fff,
+        0 0 2rem #bc13fe,
+        0 0 0.8rem #bc13fe,
+        0 0 2.8rem #bc13fe,
+        inset 0 0 1.3rem #bc13fe;
     transform: translate(0%, 50%);
-  }
-  
-  mat-card-header {
+}
+
+mat-card-header {
     padding: 20px;
     border-radius: 10px 10px 0 0;
     background-color: #800080;
     align-items: center;
     justify-content: center;
     margin-bottom: 10px;
-  }
-  
-  mat-card-title {
+}
+
+mat-card-title {
     color: #FFF;
     font-weight: bold;
     font-size: 24px;
-  }
-  
-  mat-form-field {
+}
+
+mat-form-field {
     width: 100%;
     margin: 0px 0;
-  }
-  
-  .input-field {
+}
+
+.input-field {
     color: #FFF;
-  }
-  
-  .login-btn {
+}
+
+.login-btn {
     width: 100%;
     font-size: 16px;
     font-weight: bold;
@@ -64,30 +64,29 @@
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 0 .2rem #fff,
-                0 0 .2rem #fff,
-                0 0 2rem #bc13fe,
-                0 0 0.8rem #bc13fe,
-                0 0 2.8rem #bc13fe,
-                inset 0 0 1.3rem #bc13fe;
-  }
-  
-  .login-btn:hover {
+        0 0 .2rem #fff,
+        0 0 2rem #bc13fe,
+        0 0 0.8rem #bc13fe,
+        0 0 2.8rem #bc13fe,
+        inset 0 0 1.3rem #bc13fe;
+}
+
+.login-btn:hover {
     background-color: #FFF;
     color: #800080;
     box-shadow: 0px 0px 10px #800080;
     border: 0.2rem solid #fff;
     box-shadow: 0 0 .2rem #fff,
-                0 0 .2rem #fff,
-                0 0 2rem #bc13fe,
-                0 0 0.8rem #bc13fe,
-                0 0 2.8rem #bc13fe,
-                inset 0 0 1.3rem #bc13fe;
-  }
-  
-  @media only screen and (max-width: 768px) {
+        0 0 .2rem #fff,
+        0 0 2rem #bc13fe,
+        0 0 0.8rem #bc13fe,
+        0 0 2.8rem #bc13fe,
+        inset 0 0 1.3rem #bc13fe;
+}
+
+@media only screen and (max-width: 768px) {
     .card {
-      width: 90%;
-      margin: 20px;
+        width: 90%;
+        margin: 20px;
     }
-  }
-  
+}

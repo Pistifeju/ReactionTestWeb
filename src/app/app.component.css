@@ -1,74 +1,73 @@
 /* Style the toolbar with a neon effect */
 .mat-toolbar {
-    background-color: transparent;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: transparent;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.neon-toolbar {
+  color: #FFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 80px;
+}
+
+.menu-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.menu-button {
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+  background-color: #800080;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 .2rem #fff,
+    0 0 .2rem #fff,
+    0 0 2rem #bc13fe,
+    0 0 0.8rem #bc13fe,
+    0 0 2.8rem #bc13fe,
+    inset 0 0 1.3rem #bc13fe;
+}
+
+.menu-button:hover {
+  background-color: #FFF;
+  color: #800080;
+  box-shadow: 0px 0px 10px #800080;
+  border: 0.2rem solid #fff;
+  box-shadow: 0 0 .2rem #fff,
+    0 0 .2rem #fff,
+    0 0 2rem #bc13fe,
+    0 0 0.8rem #bc13fe,
+    0 0 2.8rem #bc13fe,
+    inset 0 0 1.3rem #bc13fe;
+}
+
+@media only screen and (max-width: 768px) {
+  .neon-toolbar {
+    flex-direction: column;
+    height: auto;
   }
 
-  .neon-toolbar {
-    color: #FFF;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    height: 80px;
-  }
-  
-  .menu-title {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
   .spacer {
-    flex: 1;
+    display: none;
   }
-  
+
   .menu-button {
-    font-size: 16px;
-    font-weight: bold;
-    color: #FFF;
-    background-color: #800080;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    margin-left: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 .2rem #fff,
-                0 0 .2rem #fff,
-                0 0 2rem #bc13fe,
-                0 0 0.8rem #bc13fe,
-                0 0 2.8rem #bc13fe,
-                inset 0 0 1.3rem #bc13fe;
+    margin-top: 10px;
   }
-  
-  .menu-button:hover {
-    background-color: #FFF;
-    color: #800080;
-    box-shadow: 0px 0px 10px #800080;
-    border: 0.2rem solid #fff;
-    box-shadow: 0 0 .2rem #fff,
-                0 0 .2rem #fff,
-                0 0 2rem #bc13fe,
-                0 0 0.8rem #bc13fe,
-                0 0 2.8rem #bc13fe,
-                inset 0 0 1.3rem #bc13fe;
-  }
-  
-  @media only screen and (max-width: 768px) {
-    .neon-toolbar {
-      flex-direction: column;
-      height: auto;
-    }
-    
-    .spacer {
-      display: none;
-    }
-    
-    .menu-button {
-      margin-top: 10px;
-    }
-  }
-  
+}
