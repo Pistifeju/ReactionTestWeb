@@ -6,13 +6,9 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent {
-  @Output() changePage = new EventEmitter<string>();
+  imageSrc = 'assets/background-img.png';
 
   constructor() {}
 
   ngOnInit(): void {}
-
-  onLoginButtonClick() {
-    this.changePage.emit('login');
-  }
 }
