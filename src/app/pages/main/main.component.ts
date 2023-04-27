@@ -102,9 +102,7 @@ export class MainComponent {
     };
     try {
       await this.gameService.uploadGame(game);
-      console.log('Game uploaded successfully!');
     } catch (error) {
-      console.error('Error uploading game:', error);
     }
   }
 

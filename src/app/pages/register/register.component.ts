@@ -27,7 +27,6 @@ export class RegisterComponent {
     const confirmPassword = this.registerForm.get('confirmPassword')?.value;
 
     if (password !== confirmPassword) {
-      console.log('Passwords do not match');
       return;
     }
   
@@ -40,16 +39,13 @@ export class RegisterComponent {
         games: []
       };
       this.userService.create(user).then(_ => {
-        console.log('User added successfully.');
         localStorage.setItem('user', JSON.stringify(cred.user));
         this.router.navigateByUrl('/main');
       }).catch(error => {
-        localStorage.setItem('user', JSON.stringify("null"));
-        console.error(error);
+        localStorage.setItem('user', JSON.stringify(null));
       })
     }).catch(error => {
-      localStorage.setItem('user', JSON.stringify("null"));
-      console.error(error);
+      localStorage.setItem('user', JSON.stringify(null));
     });
   }
   

@@ -27,8 +27,7 @@ export class LoginComponent {
       localStorage.setItem('user', JSON.stringify(cred.user));
       this.router.navigateByUrl('/main');
     }).catch(error => {
-      console.error(error);
-      localStorage.setItem('user', JSON.stringify("null"));
+      localStorage.setItem('user', JSON.stringify(null));
     });
   }
 }

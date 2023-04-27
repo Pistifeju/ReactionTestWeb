@@ -41,11 +41,9 @@ export class AppComponent {
 
   logout(_?: boolean) {
     this.authService.logout().then(() => {
-      console.log('Logged out successfully.');
       localStorage.setItem('user', JSON.stringify(null));
       this.router.navigate(['/login']);
     }).catch(error => {
-      console.error(error);
     });
   }
   

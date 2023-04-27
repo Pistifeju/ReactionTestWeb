@@ -11,7 +11,6 @@ export class CustomDatePipe implements PipeTransform {
     if (typeof value === 'string') {
       date = new Date(value);
     } else {
-      // Create a new Date object from the seconds and nanoseconds
       date = new Date(value.seconds * 1000 + value.nanoseconds / 1000000);
     }
 
