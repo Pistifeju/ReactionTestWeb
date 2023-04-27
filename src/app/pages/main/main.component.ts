@@ -1,4 +1,5 @@
 import { Component, EventEmitter, HostListener, Output } from '@angular/core';
+import { GameService } from '../../shared/services/game.service';
 
 @Component({
   selector: 'app-main',
@@ -12,9 +13,12 @@ export class MainComponent {
   reactionTime: number = 0;
   reactionText = `You have the reactions of a 31 year old.\n With the reaction time of reactionTime ${this.reactionTime}`;
 
-  constructor() { }
+  constructor(private gameService: GameService) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+
+
+   }
 
   @HostListener('window:keydown.space', ['$event'])
   onSpacePress(event: KeyboardEvent): void {
@@ -65,7 +69,7 @@ export class MainComponent {
     }
   }
 
-  calculateReactionTime(): void {
+  async calculateReactionTime() {
     const currentTime = new Date().getTime();
     this.reactionTime = currentTime - this.reactionTimeStart;
     this.imageSrc = 'assets/background-img.png';
@@ -90,6 +94,17 @@ export class MainComponent {
       this.reactionText = `You have the reactions of a 90 year old.\n With the reaction time of ${this.reactionTime}`;
     } else {
       this.reactionText = `Are you dead m8, you didn't even react.\n With the reaction time of ${this.reactionTime}`;
+    }
+
+    const game = {
+      time: this.reactionTime,
+      date: new Date(),
+    };
+    try {
+      await this.gameService.uploadGame(game);
+      console.log('Game uploaded successfully!');
+    } catch (error) {
+      console.error('Error uploading game:', error);
     }
   }
 

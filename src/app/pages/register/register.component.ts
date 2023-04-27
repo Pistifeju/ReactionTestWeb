@@ -37,7 +37,6 @@ export class RegisterComponent {
         id: cred.user?.uid as string,
         email: this.registerForm.get('email')?.value,
         username: this.registerForm.get('username')?.value,
-        recordGame: 9999999,
         games: []
       };
       this.userService.create(user).then(_ => {
