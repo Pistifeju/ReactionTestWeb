@@ -16,19 +16,17 @@ div {
   transform: translate(0%, 50%);
 }
 
-h1 {
+mat-card-title {
   color: rgba(255, 255, 255, 0.8);
   font-size: 36px;
   font-weight: bold;
   text-align: center;
   margin: 10px 0;
-
-}
-
-p {
+  }
+  
+  mat-card-subtitle {
   color: rgba(255, 255, 255, 0.8);
   font-size: 24px;
   text-align: center;
   margin: 20px 0;
-
-}
+  }

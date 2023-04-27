@@ -11,10 +11,12 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { AngularFireModule } from '@angular/fire/compat';
+import { CustomDatePipe } from './shared/pipes/custom-date.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
+    CustomDatePipe,
   ],
   imports: [
     BrowserModule,

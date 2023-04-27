@@ -5,6 +5,7 @@ import { MainComponent } from './main.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import {MatCard, MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { MatIconModule } from '@angular/material/icon';
     MainRoutingModule,
     MatButtonModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatCardModule,
   ]
 })
 export class MainModule { }

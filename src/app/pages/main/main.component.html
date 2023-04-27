@@ -1,12 +1,12 @@
 <img [src]="imageSrc" class="backgroung-img">
 
 <div *ngIf="gameStatus === 'start'">
-    <h1>How old are your reactions?</h1>
-    <h1>When you see the STOP sign click or press any key to stop.</h1>
-    <h1>We'll guess your age based on your reactions.</h1>
+    <mat-card-title>How old are your reactions?</mat-card-title>
+    <mat-card-subtitle>When you see the STOP sign click or press any key to stop.</mat-card-subtitle>
+    <mat-card-subtitle>We'll guess your age based on your reactions.</mat-card-subtitle>
     <p></p>
-    <h1>Press SPACE to start the game.</h1>
+    <mat-card-subtitle>Press SPACE to start the game.</mat-card-subtitle>
 </div>
-<div><h1>{{gameStatus === 'stop' ? 'STOP' : ''}}</h1></div>
-<div><h1 *ngIf="gameStatus === 'win'">{{reactionText}} ms.</h1></div>
-<div><h1 *ngIf="gameStatus === 'lose'">Too early! You lost!</h1> </div>
+<div><mat-card-title>{{gameStatus === 'stop' ? 'STOP' : ''}}</mat-card-title></div>
+<div><mat-card-title *ngIf="gameStatus === 'win'">{{reactionText}} ms.</mat-card-title></div>
+<div><mat-card-title *ngIf="gameStatus === 'lose'">Too early! You lost!</mat-card-title> </div>

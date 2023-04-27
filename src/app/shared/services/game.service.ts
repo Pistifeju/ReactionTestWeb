@@ -32,4 +32,22 @@ export class GameService {
       }
     });
   }
+
+  getGames(): Promise<Game[]> {
+    return new Promise<Game[]>(async (resolve, reject) => {
+      const usersSnapshot = await this.firestore.collection('Users').get().toPromise();
+      if (usersSnapshot) {
+        const games: Game[] = [];
+        usersSnapshot.forEach(user => {
+          const userData = user.data() as User;
+          userData.games.forEach(game => {
+            games.push(game);
+          });
+        });
+        resolve(games);
+      } else {
+        reject('No games found');
+      }
+    });
+  }
 }
