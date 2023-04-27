@@ -49,4 +49,8 @@ export class AppComponent {
     });
   }
   
+  goToLeaderboard() {
+    this.page = 'leaderboard';
+    this.router.navigate(['/leaderboard']);
+  }
 }

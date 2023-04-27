@@ -19,6 +19,10 @@ const routes: Routes = [
     loadChildren: () => import('./pages/register/register.module').then(m => m.RegisterModule),
     canActivate: [NoAuthGuard]
   },
+  {
+    path: 'leaderboard',
+    loadChildren: () => import('./pages/leaderboard/leaderboard.module').then(m => m.LeaderboardModule),
+  },
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   {
     path: '**',
