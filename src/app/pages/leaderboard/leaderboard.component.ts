@@ -43,6 +43,8 @@ export class LeaderboardComponent {
 
   getSortedGames() {
     const sortedGamesArray = Array.from(this.games.entries()).map(([name, game]) => ({name, ...game}));
+    sortedGamesArray.sort((a, b) => a.time - b.time);
+    console.error(sortedGamesArray);
     const dataSource = new MatTableDataSource(sortedGamesArray);
     return dataSource;
   }
